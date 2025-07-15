@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --text-color: hsl(228, 12%, 48%);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  box-sizing: border-box;
+}
+
+.card {
+  width: 365px;
+  height: 780px;
+  margin-inline: auto;
+  margin-block: 40px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.desktop-img {
+  display: none;
+}
+
+.mobile-img {
+  width: 365px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.card__image {
+  margin: 0 0;
+  display: inline-block;
+}
+
+.card__caption {
+  color: var(--text-color);
+  letter-spacing: 6px;
+  font-family: Montserrat, sans-serif;
+  padding-inline: 18px;
+}
+
+.description {
+  width: 328px;
+  margin: 0 auto;
+  margin-top: -10px;
+}
+
+.card__title {
+  font-size: 35px;
+  font-family: Fraunces, sans-serif;
+  margin-inline: 18px;
+}
+
+.card__text {
+  font-family: Montserrat, sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.card__price {
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 40px;
+  color: hsl(158, 36%, 37%);
+}
+
+.card__prev-price {
+  color: var(--text-color);
+  margin-left: 20px;
+  font-family: Fraunces;
+}
+
+.card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 320px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 15px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+}
+
+.card__btn:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+@media (min-width: 768px) {
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: flex;
+    width: 350px;
+    height: 500px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 690px;
+    height: 0px;
+  }
+
+  .card__caption {
+    padding: 0px;
+    margin-inline: 45px;
+    margin-top: 40px;
+  }
+
+  .desktop-style {
+    width: 340px;
+    height: 500px;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .card__title {
+    width: 255px;
+    margin-inline: 45px;
+  }
+
+  .description {
+    width: 255px;
+  }
+
+  .card__btn {
+    width: 255px;
+    margin-top: 20px;
+  }
+}
